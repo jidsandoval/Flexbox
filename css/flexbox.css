@@ -1,0 +1,128 @@
+.headerPrincipal .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.cabecalhoPrincipal-nav-link-app {
+    order: -1;
+  }
+.headerPrincipal-nav {
+    display: flex;
+}
+
+.rodapePrincipal-patrocinadores .container {
+	display: flex;
+	justify-content: space-between;
+}
+.rodapePrincipal-patrocinadores-list {
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	width: 70%;
+	margin-right: 5%;
+}
+
+.rodapePrincipal-contatoForm {
+	width: 25%;
+}
+.rodapePrincipal-contatoForm-fieldset {
+	display: flex;
+}
+
+/* Etiqueta padre pie de pagina */
+.rodapePrincipal-navMap-list {
+    display: flex;/* cColoca en linea pero amontonados*/
+    flex-direction: column; /*Organiza en columnas*/
+    height: 300px; /*limite de 250px pero se sale*/ 
+    flex-wrap: wrap; /*Alinea a 300px y las columnas las restablece de forma estelizada*/
+    
+}
+
+/*Se comienza trabajo en lista de cursos*/
+.contenidoPrincipal-cursos {
+    display: flex;/*Se agrupa en linea pero desordenado*/
+    flex-wrap: wrap; /* Ordena en columnas*/
+
+}
+
+.contenidoPrincipal-cursos-link {
+    display: flex; /* alinea la lista*/
+    width: 23%; /* Ajusta el ancho a 23% para un espacio de 4 figuras*/
+}
+
+/*--------------------------Seccion del video------------------------*/
+
+.videoSobre .container {
+    display: flex; /*Mueve el texto a la derecha*/
+
+}
+.videoSobre-sobre{
+    text-align: center; /*Alineacion al centro*/
+    display: flex;/*alinea el texto y se muestra en tipo columna al 100%*/
+    flex-direction: column;
+}
+
+.videoSobre-video {
+    flex-grow: 2;
+    flex-shrink: 2;
+
+}
+.videoSobre-sobre-list {
+
+    flex-grow: 2;
+}
+
+/*--------------------------Parte responsiva------------------------*/
+
+@media(max-width:768px) {
+    .headerPrincipal .container {
+        flex-direction: column;
+        align-items: initial; /*Colocacion al inicio*/
+        text-align: center;/*Alinea el texto al centro*/
+    }
+    .headerPrincipal-nav {
+        flex-direction: column;
+    }
+
+    .contenidoPrincipal-cursos-link { /*Modofica los cursos a tipo columna*/
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .rodapePrincipal-navMap-list {
+        height: auto;/*Modofica a  columnas la lista de cursos*/
+        flex-wrap: nowrap;
+    }
+
+    /*Modifica el pie de pagina*/
+    .rodapePrincipal-patrocinadores .container {
+        flex-direction: column;
+    }
+    .rodapePrincipal-contatoForm {
+        width: 100%;
+    }
+
+    .rodapePrincipal-patrocinadores-list {
+        align-items: center;
+        width: 100%;
+        margin: 0%;
+    }
+    .rodapePrincipal-contatoForm-fieldset {
+        justify-content: center; /*Centra fomulario*/
+    }
+    .videoSobre-sobre .container {
+        flex-direction:column ;
+    }
+}
+/*
+flex container:
+justify-content, align-items, flex-direction, flex-wrap
+flex items:
+order, flex-grow, flex-shrink
+
+flex container:
+justify-content, align-items, display: flex,
+flex items:
+order, flex-grow, flex-shrink
+
+*/
